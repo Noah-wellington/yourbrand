@@ -1,26 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Contact us at 0104543380 or email charmclassic30@gmail.com">
-  <meta name="keywords" content="contact, phone, email, charmclassic30, 0104543380">
-  <meta name="author" content="CharmClassic">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CharmClassic - Contact Us</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Brand — Simple HTML Prototype</title>
+  <meta name="description" content="Your Brand — clean single-file HTML landing page prototype." />
+  <style>
+    :root{--bg:#0f1724;--card:#111827;--accent:#06b6d4;--muted:#9ca3af;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+    body{background:linear-gradient(180deg,#071029 0%, #07101a 60%);color:#e6eef7;line-height:1.4}
+    .container{max-width:980px;margin:40px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:52px;height:52px;background:linear-gradient(135deg,var(--accent),#6366f1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#06121a}
+    nav a{margin-left:14px;color:var(--muted);text-decoration:none;font-weight:600}
+    .hero{display:flex;gap:28px;align-items:center;margin-top:34px}
+    .hero-left{flex:1}
+    h1{font-size:38px;margin:0 0 10px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta{display:inline-block;padding:12px 18px;border-radius:10px;background:var(--accent);color:#012028;text-decoration:none;font-weight:700}
+    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:18px}
+    .feature{background:var(--glass);padding:12px;border-radius:10px}
+    footer{margin-top:36px;color:var(--muted);font-size:14px;text-align:center}
+    @media (max-width:720px){.hero{flex-direction:column}.logo{width:44px;height:44px}}
+    form{display:grid;gap:8px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    input::placeholder,textarea::placeholder{color:var(--muted)}
+    button{padding:10px 12px;border-radius:8px;border:0;background:linear-gradient(90deg,var(--accent),#8b5cf6);font-weight:700}
+    .small{font-size:13px;color:var(--muted)}
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; text-align: center; padding: 50px;">
-  <h1>Welcome to CharmClassic</h1>
-  <p>Get in touch with us:</p>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">YB</div>
+        <div>
+          <div style="font-weight:800">Your Brand</div>
+          <div class="small">Simple. Clean. Built for growth.</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <p><strong>📞 Phone:</strong> <a href="tel:0104543380">0104543380</a></p>
-  <p><strong>📧 Email:</strong> <a href="mailto:charmclassic30@gmail.com">charmclassic30@gmail.com</a></p>
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Launch your vibe — <span style="color:var(--accent)">Your Brand</span></h1>
+        <p class="lead">A minimal landing page template you can copy, edit and ship. Built as a single HTML file so you can deploy fast — GitHub Pages, Netlify, Vercel, whatever.</p>
 
-  <form action="mailto:charmclassic30@gmail.com" method="post" enctype="text/plain">
-    <h2>Send us a message</h2>
-    <input type="text" name="name" placeholder="Your Name" required><br><br>
-    <input type="email" name="email" placeholder="Your Email" required><br><br>
-    <textarea name="message" rows="5" placeholder="Your Message"></textarea><br><br>
-    <button type="submit">Send</button>
-  </form>
+        <div style="display:flex;gap:12px;align-items:center">
+          <a class="cta" href="#contact">Get started</a>
+          <a class="small" href="#features">See features →</a>
+        </div>
+
+        <div class="features" id="features" style="margin-top:18px">
+          <div class="feature card">
+            <strong>Fast setup</strong>
+            <div class="small">Drag this file into a repo and publish.</div>
+          </div>
+          <div class="feature card">
+            <strong>Responsive</strong>
+            <div class="small">Looks clean on mobile and desktop.</div>
+          </div>
+          <div class="feature card">
+            <strong>Customizable</strong>
+            <div class="small">Change colors, text, and images easily.</div>
+          </div>
+        </div>
+      </div>
+
+      <aside style="width:340px">
+        <div class="card">
+          <h3 style="margin:0 0 8px">Contact</h3>
+          <p class="small">Drop your email and we'll hit you up.</p>
+          <form id="contact" action="https://formspree.io/f/your-form-id" method="POST">
+            <input name="name" placeholder="Your name" required />
+            <input name="email" type="email" placeholder="Email" required />
+            <textarea name="message" rows="4" placeholder="What's up?" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+          <p class="small" style="margin-top:10px">
+            Or just email <a href="mailto:charmclassic30@gmail.com">charmclassic30@gmail.com</a><br>
+            Call/WhatsApp: <a href="tel:0104543380">0104543380</a>
+          </p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Your Brand — made with vibes | 
+        <a href="mailto:charmclassic30@gmail.com">charmclassic30@gmail.com</a> | 
+        <a href="tel:0104543380">0104543380</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const form = document.getElementById('contact');
+    form.addEventListener('submit', function(e){
+      if(form.action.includes('formspree.io/f/your-form-id')){
+        e.preventDefault();
+        alert('Replace the form action URL with your Formspree (or other) endpoint before submitting.');
+      }
+    });
+  </script>
 </body>
 </html>
